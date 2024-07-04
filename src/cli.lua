@@ -26,5 +26,8 @@ local source = sourceFile
 local pipeline = Prometheus.Pipeline:fromConfig(config);
 local out = pipeline:apply(source, sourceFile);
 
-print(out) 
+print(out)
+	local sxi = io.open("output.lua", "w")
+sxi:write(out)
+sxi:close()
 end
